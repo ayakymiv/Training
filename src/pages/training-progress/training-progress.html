@@ -1,0 +1,32 @@
+<!--
+  Generated template for the TrainingProgressPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+   <ion-navbar>
+    <ion-title>German</ion-title>
+  </ion-navbar> 
+
+</ion-header>
+
+
+<ion-content padding>
+  <ng2-slim-loading-bar></ng2-slim-loading-bar>
+  <form #form="ngForm" (ngSubmit)="logForm(form)" novalidate>
+      <ion-item no-lines>
+        <ion-label>Todo</ion-label>
+      </ion-item>
+      <ion-item no-lines>
+        <ion-textarea autosize rows="5" [(ngModel)]="todo.description" name="description" ngControl="description"></ion-textarea>
+      </ion-item>
+      <ion-item no-lines center>
+        <div text-center>
+          <button ion-button type="submit" round default color="secondary" center (onclick)="startLoading()">Check</button>
+        </div>
+      </ion-item>
+      
+    </form>
+</ion-content>
